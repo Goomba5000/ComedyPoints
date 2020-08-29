@@ -4,8 +4,8 @@ client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`)
 })
 client.on("message", msg => {
-  if (msg.content === "!ping") {
-    msg.reply("Pong!")
+  if (msg.content === "!comedy") {
+    msg.reply(Math.floor(Math.random() * 1000) + " comedy points.");
   }
 })
 client.login(process.env.BOT_TOKEN);
