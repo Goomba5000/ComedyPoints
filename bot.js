@@ -8,4 +8,4 @@ client.on("message", msg => {
     msg.reply("Pong!")
   }
 })
-client.login(process.env.BOT_TOKEN);
+client.login("NzQ5Mzg2MDYxMTY3MTk4MzM4.X0rOJw.4tbT5e-wv4c1uJkmoIuk33LDAto");
