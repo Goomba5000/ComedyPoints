@@ -9,7 +9,7 @@ client.on("message", message => {
     }
 
     const filter = (reaction) => reaction.emoji.name === '👍'
-    message.awaitReactions(filter, { max: 1 })
+    message.awaitReactions(filter, { max: 2 })
         .then(collected => {
             if (collected.first() != null)
             {
