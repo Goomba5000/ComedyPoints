@@ -9,11 +9,12 @@ client.on("message", message => {
     }
 
     const filter = (reaction) => reaction.emoji.name === ':thumbsup:'
-    message.awaitReactions(filter, { time: 5000})
+    message.awaitReactions(filter, { max: 1 })
         .then(collected => {
+            message.reply("reaction");
             if (collected.first() != null)
             {
-                if (collected.first().emoji.name == ':thumbsup:')
+                if (collected.first().emoji.name === ':thumbsup:')
                     message.reply(Math.floor(Math.random() * 1000) + " comedy points.");
             }
         });
