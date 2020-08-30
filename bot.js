@@ -13,11 +13,11 @@ client.on("message", message => {
         .then(collected => {
             if (collected.first() != null)
             {
-                if (collected.first().emoji.name == '\:comedypoints:')
+                if (collected.first().emoji.name == '\:thumbsup:')
                     message.reply(Math.floor(Math.random() * 1000) + " comedy points.");
             }
             else
-                message.reply("Didn't do the write reaction, silly.");
+                message.reply("Didn't do the right reaction, silly.");
         });
 })
 client.login(process.env.BOT_TOKEN);
