@@ -7,20 +7,15 @@ client.on("message", message => {
     const filter = (reaction) => reaction.emoji.name === '🥇'
     message.awaitReactions(filter, { max: 3 })
         .then(collected => {
-            // if (collected.first() != null)
-            // {
-            //     console.log(collected.first().emoji.name);
-            //     if (collected.first().emoji.name === '🥇')
-            //     {
             var range = 0;
             var prob = Math.floor(Math.random() * 12);
             if (prob == 11)
                 range = 1000;
+            else if (prob == 1)
+                range = 5;
             else
                 range = 50;
             message.reply(Math.floor(Math.random() * range) + " comedy points.");
-            //     }
-            // }
         });
 })
 client.login(process.env.BOT_TOKEN);
