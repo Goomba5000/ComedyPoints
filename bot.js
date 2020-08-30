@@ -14,7 +14,7 @@ client.on("message", message => {
             if (collected.first().emoji.name == '\:comedypoints:')
                 message.reply(Math.floor(Math.random() * 1000) + " comedy points.");
             else
-                message.reply("Didn't do the write reaction, silly.");
+                message.reply("Didn't do the write reaction, silly!");
         });
 })
 client.login(process.env.BOT_TOKEN);
