@@ -8,12 +8,12 @@ client.on("message", message => {
         message.reply(Math.floor(Math.random() * 1000) + " comedy points.");
     }
 
-    const filter = (reaction) => reaction.emoji.name === '749418900231553044'
+    const filter = (reaction) => reaction.emoji.name === '👍'
     message.awaitReactions(filter, { max: 1 })
         .then(collected => {
             if (collected.first() != null)
             {
-                if (collected.first().emoji.name === '749418900231553044')
+                if (collected.first().emoji.name === '👍')
                     message.reply(Math.floor(Math.random() * 1000) + " comedy points.");
             }
         });
