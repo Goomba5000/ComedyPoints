@@ -8,7 +8,7 @@ client.on("message", message => {
         message.reply(Math.floor(Math.random() * 1000) + " comedy points.");
     }
 
-    const filter = (reaction) => reaction.emoji.name === '\:comedypoints:'
+    const filter = (reaction) => reaction.emoji.name === '\:thumbsup:'
     message.awaitReactions(filter, { time: 5000})
         .then(collected => {
             if (collected.first() != null)
@@ -16,8 +16,6 @@ client.on("message", message => {
                 if (collected.first().emoji.name == '\:thumbsup:')
                     message.reply(Math.floor(Math.random() * 1000) + " comedy points.");
             }
-            else
-                message.reply("Didn't do the right reaction, silly.");
         });
 })
 client.login(process.env.BOT_TOKEN);
