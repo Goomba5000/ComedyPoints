@@ -5,7 +5,7 @@ client.on("ready", () => {
 })
 client.on("message", message => {
     const filter = (reaction) => reaction.emoji.name === '🥇'
-    message.awaitReactions(filter, { max: 3 })
+    message.awaitReactions(filter, { max: 7 })
         .then(collected => {
             var range = 0;
             var prob = Math.floor(Math.random() * 12);
