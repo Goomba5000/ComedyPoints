@@ -4,13 +4,13 @@ client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`)
 })
 client.on("message", message => {
-    const filter = (reaction) => reaction.emoji.name === '<:comedypoints:749418900231553044>'
-    message.awaitReactions(null, { max: 1 })
+    const filter = (reaction) => reaction.emoji.name === '👍'
+    message.awaitReactions(filter, { max: 1 })
         .then(collected => {
             if (collected.first() != null)
             {
                 console.log(collected.first().emoji.name);
-                if (collected.first().emoji.name === '<:comedypoints:749418900231553044>')
+                if (collected.first().emoji.name === '👍')
                 {
                     message.reply(Math.floor(Math.random() * 70) + " comedy points.");
                 }
