@@ -15,7 +15,8 @@ client.on("message", message => {
                 range = 5;
             else
                 range = 50;
-            message.reply(Math.floor(Math.random() * range) + " comedy points.");
+            if (collected.first().emoji.name == '🥇')
+                message.reply(Math.floor(Math.random() * range) + " comedy points.");
         });
 })
 client.login(process.env.BOT_TOKEN);
